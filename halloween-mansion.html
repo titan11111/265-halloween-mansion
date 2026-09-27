@@ -95,6 +95,11 @@ body:has(#overlay:not([hidden])) #msg{visibility:hidden}
 </style>
 </head>
 <body>
+<div id="overlay">
+  <div class="card" id="card">
+    <button class="btn" id="startBtn">開け</button>
+  </div>
+</div>
 <div id="app">
   <header id="hud">
     <span id="lives" aria-label="評判"></span>
@@ -114,9 +119,6 @@ body:has(#overlay:not([hidden])) #msg{visibility:hidden}
 </div>
 
 <div id="err"></div>
-<div id="overlay">
-  <div class="card" id="card"></div>
-</div>
 
 <script>
 function showErr(m){var e=document.getElementById('err');if(e){e.style.display='block';e.textContent='エラー: '+m;}}
